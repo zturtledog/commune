@@ -1,0 +1,34 @@
+modLoader="javafml" #mandatory
+loaderVersion="[36,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="All rights reserved"
+
+
+[[mods]] #mandatory
+modId="commune" #mandatory
+version="${file.jarVersion}" #mandatory
+
+
+displayName="Commune" #mandatory
+logoFile="examplemod.png" #optional
+credits="" #optional
+authors="ConfusedParrotFish" #optional
+description='''
+
+Commune is a magic mod in which you wield the unknowable power of the void to crush your enemies and construct empires.
+
+'''
+
+
+[[dependencies.commune]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[36,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.commune]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"

@@ -1,0 +1,8 @@
+.gradle
+.vscode
+bin
+gradle
+run
+build
+src/generated
+src/test
