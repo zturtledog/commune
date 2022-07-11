@@ -20,10 +20,25 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ModBlocks {
     public static final DeferredRegister<Block> blocks = DeferredRegister.create(ForgeRegistries.BLOCKS, Comune.modid);
 
+    //blocks 
+
     public static final RegistryObject<Block> TESTBLOCK = registerblock("blockname", 
         ()-> new Block(AbstractBlock.Properties.create(Material.WOOL)
             .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool()
             .hardnessAndResistance(5f)));
+
+    //voidstone
+    public static final RegistryObject<Block> VOIDSTONE = registerblock("voidstone", 
+        ()-> new Block(AbstractBlock.Properties.create(Material.ROCK)
+            .harvestLevel(3).harvestTool(ToolType.PICKAXE)
+            .setRequiresTool().hardnessAndResistance(5f)));
+
+    public static final RegistryObject<Block> VOIDSTONE_PILLAR_CAP = registerblock("voidstonepillarcap", 
+            ()-> new Block(AbstractBlock.Properties.create(Material.ROCK)
+                .harvestLevel(3).harvestTool(ToolType.PICKAXE)
+                .setRequiresTool().hardnessAndResistance(5f)));
+
+    //end of blocks
 
     public static <T extends Block>RegistryObject<T> registerblock(String name, Supplier<T> block) {
         RegistryObject<T> retval = blocks.register(name, block);

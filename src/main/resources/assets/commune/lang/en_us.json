@@ -1,5 +1,9 @@
 {
     "item.commune.name":"name?",
 
+    "block.commune.voidstone": "Voidstone",
+    "block.commune.voidstonepillarcap": "Voidstone Pillar Cap",
+    "block.commune.blockname":"name? but a block?",
+
     "itemGroup.Commune":"Commune"
 }
