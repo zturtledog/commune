@@ -1,9 +1,19 @@
 {
     "item.commune.name":"name?",
+    "item.commune.voidbottle":"Void In A Bottle",
 
     "block.commune.voidstone": "Voidstone",
+    "block.commune.voidstonechiseled": "Chiseled Voidstone",
     "block.commune.voidstonepillarcap": "Voidstone Pillar Cap",
+    "block.commune.voidstonepillar": "Voidstone Pillar",
+    "block.commune.voidstonepolished":"Polished Voidstone",
+    "block.commune.voidstonebricksmall":"Small Voidstone Bricks",
+    "block.commune.voidstonebrickstairs": "Voidstone Brick Stairs",
+    "block.commune.voidstonebrickstairsmall": "Voidstone Small Brick Stairs",
+    "block.commune.voidstonebricks": "Voidstone Bricks",
     "block.commune.blockname":"name? but a block?",
+
+    "block.commune.mysticauldron":"Mystic Cauldron",
 
     "itemGroup.Commune":"Commune"
 }

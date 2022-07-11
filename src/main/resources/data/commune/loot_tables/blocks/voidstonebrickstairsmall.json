@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type":"minecraft:item",
-                    "name":"commune:voidstone"
+                    "name":"commune:voidstonebrickstairsmall"
                 }
             ]
         }

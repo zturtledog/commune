@@ -1,6 +1,7 @@
 package com.confusedparrotfish.commune.item;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.Properties;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -11,9 +12,18 @@ public class ModItems {
     public static final DeferredRegister<Item> items = DeferredRegister.create(ForgeRegistries.ITEMS, Comune.modid);
 
     public static final RegistryObject<Item> TESTITEM = items.register("name", 
-        () -> new Item(new Item.Properties().group(ModItemGroup.communetab)));
+        () -> new Item(prop()));
+
+    public static final RegistryObject<Item> VOID_BOTTLE = items.register("voidbottle", 
+        () -> new Item(prop()));
 
     public static void register(IEventBus eventBus) {
         items.register(eventBus);
+    }
+
+    //properties
+
+    private static Properties prop() {
+        return new Item.Properties().group(ModItemGroup.communetab);
     }
 }

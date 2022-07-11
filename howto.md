@@ -3,7 +3,9 @@
 @commune:ModBLocks 
 ```java
 public static final RegistryObject<Block> <name> = registerblock("<uuid>", 
-        ()-> new Block(AbstractBlock.Properties.create(Material)));
+        ()-> new Block(AbstractBlock.Properties.create(Material.WOOL)
+            .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool()
+            .hardnessAndResistance(5f)));
 ```
 
 @resource:models/block/<uuid>.json

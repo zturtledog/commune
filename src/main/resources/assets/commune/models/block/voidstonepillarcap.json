@@ -1,12 +1,12 @@
 {
     "parent": "block/cube",
     "textures": {
-      "down": "commune:blocks/voidstonepillartop",
-      "up": "commune:blocks/polishedvoidstone",
-      "north": "commune:blocks/voidstonepillarside",
-      "east": "commune:blocks/voidstonepillarside",
-      "south": "commune:blocks/voidstonepillarside",
-      "west": "commune:blocks/voidstonepillarside",
-      "particle": "commune:blocks/voidstone"
+      "down": "commune:block/voidstonepillartop",
+      "up": "commune:block/polishedvoidstone",
+      "north": "commune:block/voidstonepillarcap",
+      "east": "commune:block/voidstonepillarcap",
+      "south": "commune:block/voidstonepillarcap",
+      "west": "commune:block/voidstonepillarcap",
+      "particle": "commune:block/voidstone"
     }
   }
