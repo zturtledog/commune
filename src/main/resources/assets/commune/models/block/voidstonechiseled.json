@@ -2,7 +2,7 @@
     "parent": "block/cube",
     "textures": {
         "down": "commune:block/polishedvoidstone",
-        "up": "commune:block/voidstonepillartop",
+        "up": "commune:block/polishedvoidstone",
         "north": "commune:block/chiseledvoidstone",
         "east": "commune:block/chiseledvoidstone",
         "south": "commune:block/chiseledvoidstone",
