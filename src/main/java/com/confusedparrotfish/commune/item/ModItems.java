@@ -15,6 +15,17 @@ public class ModItems {
         () -> new Item(prop()));
 
     public static final RegistryObject<Item> VOID_BOTTLE = items.register("voidbottle", 
+        () -> new Item(prop().maxStackSize(1)));
+
+    //--elements
+
+    public static final RegistryObject<Item> LOSIL_FRAGMENT = items.register("losilfragment", 
+        () -> new Item(prop()));
+        
+    public static final RegistryObject<Item> SILOS_FRAGMENT = items.register("silosfragment", 
+        () -> new Item(prop()));
+        
+    public static final RegistryObject<Item> FALIS_FRAGMENT = items.register("falisfragment", 
         () -> new Item(prop()));
 
     public static void register(IEventBus eventBus) {

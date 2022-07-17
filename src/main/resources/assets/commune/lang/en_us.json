@@ -1,6 +1,9 @@
 {
     "item.commune.name":"name?",
-    "item.commune.voidbottle":"Void In A Bottle",
+    "item.commune.losilfragment":"Losil Fragment",
+    "item.commune.falisfragment":"Falis Shard",
+    "item.commune.silosfragment":"Silos Dust",
+    "item.commune.voidbottle":"Vial 'O Void",
 
     "block.commune.voidstone": "Voidstone",
     "block.commune.voidstonechiseled": "Chiseled Voidstone",
@@ -14,6 +17,7 @@
     "block.commune.blockname":"name? but a block?",
 
     "block.commune.mysticauldron":"Mystic Cauldron",
+    "block.commune.crystalizer":"Crystalizer",
 
     "itemGroup.Commune":"Commune"
 }

@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 
 public class utils {
     public static final void ejectitem(World world, BlockPos pos, ItemStack item) {
-        Random rand = new Random();
+        Random rand = world.rand;
 
         ItemEntity entityItem = new ItemEntity(world,
                 pos.getX()+0.5, pos.getY(), pos.getZ()+0.5,
@@ -19,15 +19,23 @@ public class utils {
             entityItem.getItem().setTag(item.getTag().copy());
         }
 
-        float factor = 0.05F;
+        float factor = 0.005F;
         entityItem.setMotion(
-                rand.nextGaussian()// * factor
-                // 0
-                ,
-                rand.nextGaussian() * 1.7F,
-                rand.nextGaussian()// * factor
-                // 0
-                );
+            (rand.nextDouble()-0.5d) * factor,
+            (rand.nextDouble()-0.5d) * factor + 0.7F,
+            (rand.nextDouble()-0.5d) * factor);
+        world.addEntity(entityItem);
+    }
+
+    public static final void dropitem(World world, BlockPos pos, ItemStack item) {
+        ItemEntity entityItem = new ItemEntity(world,
+                pos.getX()+0.5, pos.getY(), pos.getZ()+0.5,
+                item.copy());
+
+        if (item.hasTag()) {
+            entityItem.getItem().setTag(item.getTag().copy());
+        }
+
         world.addEntity(entityItem);
     }
 }

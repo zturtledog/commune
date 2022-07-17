@@ -1,0 +1,24 @@
+#boil
+    #liquid
+        0:minecraft:lava
+    #end
+
+    #blocks
+        0:minecraft:fire
+    #end
+#end
+
+#conf
+    uvel:0.7
+#end
+
+#recipies
+    #losil
+    #end
+
+    #silos
+    #end
+
+    #falis
+    #end
+#end

@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "mode=0": {"model": "commune:block/crystalizer"},
+        "mode=1": {"model": "commune:block/crystalizer_filled"},
+        "mode=2": {"model": "commune:block/crystalizer_losil"},
+        "mode=3": {"model": "commune:block/crystalizer_silos"},
+        "mode=4": {"model": "commune:block/crystalizer_falis"}
+    }
+}

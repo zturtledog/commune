@@ -66,6 +66,8 @@ public class Comune {
 
             //cauldron lookup
             RenderTypeLookup.setRenderLayer(ModBlocks.MYSTIC_CAULDRON.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(ModBlocks.CRYSTALIZER.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(ModBlocks.SMOOTH_GLASS.get(), RenderType.getTranslucent());
         });
     }
 

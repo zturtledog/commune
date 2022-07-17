@@ -3,6 +3,7 @@ package com.confusedparrotfish.commune.block;
 import java.util.function.Supplier;
 
 import com.confusedparrotfish.commune.Comune;
+import com.confusedparrotfish.commune.block.custom.crystilizer;
 import com.confusedparrotfish.commune.block.custom.mysticauldron;
 import com.confusedparrotfish.commune.item.ModItemGroup;
 import com.confusedparrotfish.commune.item.ModItems;
@@ -11,6 +12,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.GlassBlock;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.block.AbstractBlock.Properties;
 import net.minecraft.block.material.Material;
@@ -60,6 +62,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> MYSTIC_CAULDRON = registerblock("mysticauldron", 
         ()-> new mysticauldron(metal_prop(3).notSolid()));
 
+    public static final RegistryObject<Block> CRYSTALIZER = registerblock("crystalizer", 
+        ()-> new crystilizer(stone_prop(3).notSolid().tickRandomly()));
+
+    //--glass
+
+    public static final RegistryObject<Block> SMOOTH_GLASS = registerblock("smoothglass", 
+        ()-> new GlassBlock(glass_prop(3)));
+
     //end of blocks
 
     public static <T extends Block>RegistryObject<T> registerblock(String name, Supplier<T> block) {
@@ -91,6 +101,11 @@ public class ModBlocks {
         return AbstractBlock.Properties.create(Material.WOOD)
             .harvestLevel(lvl).harvestTool(ToolType.AXE)
             .setRequiresTool().hardnessAndResistance(lvl+1);
+    }
+
+    private static Properties glass_prop(int lvl) {
+        return AbstractBlock.Properties.create(Material.GLASS)
+            .harvestLevel(lvl).hardnessAndResistance(lvl+1);
     }
 
     private static Properties metal_prop(int lvl) {

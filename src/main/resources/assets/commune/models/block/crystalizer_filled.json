@@ -1,0 +1,11 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "commune:block/crystalizer",
+	"texture_size": [48, 48],
+	"textures": {
+		"0": "commune:block/crystalizer",
+		"1": "commune:block/flux",
+		"2": "commune:block/empty",
+		"particle": "commune:block/crystalizer"
+	}
+}
