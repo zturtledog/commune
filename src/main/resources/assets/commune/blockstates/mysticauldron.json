@@ -2,12 +2,15 @@
     "variants": {
         "mode=0": {"model": "commune:block/mystic_cauldron"},
         "mode=1": {
-          "model": "minecraft:block/cauldron_level1"
+          "model": "commune:block/mystic_cauldron_stage1"
         },
         "mode=2": {
-          "model": "minecraft:block/cauldron_level2"
+          "model": "commune:block/mystic_cauldron_stage1"
         },
         "mode=3": {
+          "model": "minecraft:block/cauldron_level2"
+        },
+        "mode=4": {
           "model": "minecraft:block/cauldron_level3"
         }
     }

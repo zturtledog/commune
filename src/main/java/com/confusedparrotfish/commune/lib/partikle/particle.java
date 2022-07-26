@@ -1,5 +1,5 @@
 
-package com.confusedparrotfish.commune.lib;
+package com.confusedparrotfish.commune.lib.partikle;
 
 import java.util.Random;
 
@@ -38,6 +38,30 @@ public class particle {
                         (double) pos.getZ() + j, 0.0D, 0.0D, 0.0D);
                 }
             }
+        }
+    }
+
+    /**
+     * create a particle that launches into the air like the lava pifzs and pops
+     * 
+     * @param world
+     * @param pos
+     * @param particle
+     * @param off
+     * @param itr
+     */
+    public static void eject(World world, BlockPos pos, IParticleData particle, double off, int itr) {
+        Random rand = world.rand;
+
+        for (int i = 0; i < itr; i++) {
+            world.addParticle(particle, 
+                (double) pos.getX(), 
+                (double) pos.getY() + off,
+                (double) pos.getZ(), 
+                (rand.nextDouble()-0.5d)*0.25d,
+                (rand.nextDouble()-0.5d)*0.25d + 0.27F,
+                (rand.nextDouble()-0.5d)*0.25d
+            );
         }
     }
 }

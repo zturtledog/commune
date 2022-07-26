@@ -1,13 +1,15 @@
 package com.confusedparrotfish.commune.block.custom;
 
+import java.util.Random;
 import java.util.stream.Stream;
 
-import com.confusedparrotfish.commune.lib.utils;
+import com.confusedparrotfish.commune.lib.partikle.utils;
 import com.confusedparrotfish.commune.tileentity.ModTileEntities;
 import com.confusedparrotfish.commune.tileentity.mysticauldrontile;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -26,6 +28,7 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 
 public class mysticauldron extends Block {
     public static final IntegerProperty LEVEL = IntegerProperty.create("mode", 0, 5);
@@ -75,7 +78,7 @@ public class mysticauldron extends Block {
                     ItemStack fall = main.copy();
                     fall.setCount(1);
                     main.shrink(1);
-                    utils.ejectitem(world, pos, fall);
+                    utils.ejectitem(world, pos, fall, 0.5d);
                     if (((mysticauldrontile) tile).mode > 2) {
                         ((mysticauldrontile) tile).sour(world, pos, player);
                     }
@@ -126,4 +129,13 @@ public class mysticauldron extends Block {
 	protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
 		builder.add(LEVEL);
 	}
+
+    @Override
+    public void tick(BlockState state, ServerWorld world, BlockPos pos, Random rand) {
+        mysticauldrontile tile = (mysticauldrontile)world.getTileEntity(pos);
+
+        if (world.getBlockState(new BlockPos((double)pos.getX(), (double)pos.getY()-1, (double)pos.getZ())).getBlock().equals(Blocks.LAVA)) {
+            tile.mode = 2;
+        }
+    }
 }

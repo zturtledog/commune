@@ -1,5 +1,5 @@
 {
     "variants":{
-        "": { "model": "commune:block/voidstone"}
+        "": { "model": "commune:block/smoothglass"}
     }
 }

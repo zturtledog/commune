@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.stream.Stream;
 
 import com.confusedparrotfish.commune.item.ModItems;
-import com.confusedparrotfish.commune.lib.utils;
+import com.confusedparrotfish.commune.lib.partikle.utils;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -51,7 +51,8 @@ public class crystilizer extends Block {
                     ItemStack fall = player.inventory.getCurrentItem().copy();
                     fall.setCount(1);
                     player.inventory.getCurrentItem().shrink(1);
-                    utils.ejectitem(world, pos, fall);
+                    utils.ejectitem(world, pos, fall, 0.6d);
+                    // particle.eject(world, pos, RedstoneParticleData.REDSTONE_DUST, 0.5625D, 4);
                     // play eject
                 }
             }
@@ -60,7 +61,8 @@ public class crystilizer extends Block {
                 utils.ejectitem(world, pos, new ItemStack(
                     state.get(LEVEL) == 2 ? ModItems.LOSIL_FRAGMENT.get() :
                     (state.get(LEVEL) == 3 ? ModItems.SILOS_FRAGMENT.get() : ModItems.FALIS_FRAGMENT.get())
-                ));
+                ),0.6d);
+                
                 world.setBlockState(pos, state.with(LEVEL, 0), 2);
             }
         }

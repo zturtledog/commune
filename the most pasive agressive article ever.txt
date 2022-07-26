@@ -1,0 +1,22 @@
+Teams is down: Microsoft broke its own storage and is trying to fix it fast
+Simon Sharwood - Wednesday
+© Provided by The Register
+
+Teams is down: Microsoft broke its own storage and is trying to fix it fast
+Remember: ‘telephones’ exist, are handy for collaboration, and usually work
+
+Microsoft’s Teams collaboration environment is experiencing an outage, depriving unknown 
+numbers of people of the opportunity to enjoy video and/or audio conferences, or to access documents.
+Microsoft acknowledged the issue at 01:47 UTC on July 21st and offered the following update around 75 minutes later.
+The outage appears to be global but Microsoft is perhaps a little fortunate that the incident struck when the working 
+day was all-but over in the USA, and in the dark of the European night. Most of the reaction 
+The Register can find is therefore from the Asia-Pacific region, where businesses such as an Australian 
+horse-racing organisation have been disrupted by the incident.
+Others have wryly observed that the outage will allow workers some unplanned but welcome downtime.
+
+Some are seeking to profit from the incident.
+
+The Register would like to take this opportunity to wish readers the best during this trying time, 
+and to remind them that “telephones” exist and can quite easily arrange at least three-way calls. 
+Those who attend offices may also wish to consider “walking” to a “meeting room”, a facility established 
+with the express purpose of allowing teams of people to interact. ®

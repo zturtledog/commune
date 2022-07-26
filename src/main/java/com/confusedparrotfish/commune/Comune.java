@@ -9,6 +9,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -22,6 +23,7 @@ import org.apache.logging.log4j.Logger;
 import com.confusedparrotfish.commune.block.ModBlocks;
 import com.confusedparrotfish.commune.item.ModItems;
 import com.confusedparrotfish.commune.tileentity.ModTileEntities;
+import com.confusedparrotfish.commune.tileentity.renderer.mysticauldronrender;
 
 import java.util.stream.Collectors;
 
@@ -62,11 +64,12 @@ public class Comune {
         // do something that can only be done on the client
 
         event.enqueueWork(()->{
-
+            // ClientRegistry.bindTileEntityRenderer(tileEntityType, rendererFactory);
+            ClientRegistry.bindTileEntityRenderer(ModTileEntities.MYSTIC_CAULDRON_TILE.get(), mysticauldronrender::new);
 
             //cauldron lookup
-            RenderTypeLookup.setRenderLayer(ModBlocks.MYSTIC_CAULDRON.get(), RenderType.getCutout());
-            RenderTypeLookup.setRenderLayer(ModBlocks.CRYSTALIZER.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(ModBlocks.MYSTIC_CAULDRON.get(), RenderType.getTranslucent());
+            RenderTypeLookup.setRenderLayer(ModBlocks.CRYSTALIZER.get(), RenderType.getTranslucent());
             RenderTypeLookup.setRenderLayer(ModBlocks.SMOOTH_GLASS.get(), RenderType.getTranslucent());
         });
     }

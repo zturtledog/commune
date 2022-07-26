@@ -28,6 +28,9 @@ public class ModItems {
     public static final RegistryObject<Item> FALIS_FRAGMENT = items.register("falisfragment", 
         () -> new Item(prop()));
 
+    public static final RegistryObject<Item> SOUR_INGREDIENT = items.register("souringredient", 
+        () -> new Item(prop()));
+
     public static void register(IEventBus eventBus) {
         items.register(eventBus);
     }

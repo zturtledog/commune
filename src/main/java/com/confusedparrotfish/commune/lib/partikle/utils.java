@@ -1,4 +1,4 @@
-package com.confusedparrotfish.commune.lib;
+package com.confusedparrotfish.commune.lib.partikle;
 
 import java.util.Random;
 
@@ -8,22 +8,24 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class utils {
-    public static final void ejectitem(World world, BlockPos pos, ItemStack item) {
+    public static final void ejectitem(World world, BlockPos pos, ItemStack item, double off) {
         Random rand = world.rand;
 
         ItemEntity entityItem = new ItemEntity(world,
-                pos.getX()+0.5, pos.getY(), pos.getZ()+0.5,
+                pos.getX()+0.5, pos.getY()+off, pos.getZ()+0.5,
                 item.copy());
 
         if (item.hasTag()) {
             entityItem.getItem().setTag(item.getTag().copy());
         }
 
-        float factor = 0.005F;
+        float factor = 0.5F;
         entityItem.setMotion(
-            (rand.nextDouble()-0.5d) * factor,
-            (rand.nextDouble()-0.5d) * factor + 0.7F,
-            (rand.nextDouble()-0.5d) * factor);
+            (rand.nextDouble()-0.5d)*factor,
+            // 0,
+            (rand.nextDouble()-0.5d)*factor + 0.7F,
+            (rand.nextDouble()-0.5d)*factor);
+            // 0);
         world.addEntity(entityItem);
     }
 

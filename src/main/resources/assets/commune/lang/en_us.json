@@ -2,6 +2,7 @@
     "item.commune.name":"name?",
     "item.commune.losilfragment":"Losil Fragment",
     "item.commune.falisfragment":"Falis Shard",
+    "item.commune.souringredient":"Soured Ingredient",
     "item.commune.silosfragment":"Silos Dust",
     "item.commune.voidbottle":"Vial 'O Void",
 
@@ -10,6 +11,7 @@
     "block.commune.voidstonepillarcap": "Voidstone Pillar Cap",
     "block.commune.voidstonepillar": "Voidstone Pillar",
     "block.commune.voidstonepolished":"Polished Voidstone",
+    "block.commune.smoothglass":"Purified Crystal",
     "block.commune.voidstonebricksmall":"Small Voidstone Bricks",
     "block.commune.voidstonebrickstairs": "Voidstone Brick Stairs",
     "block.commune.voidstonebrickstairsmall": "Voidstone Small Brick Stairs",
