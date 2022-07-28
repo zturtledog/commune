@@ -22,6 +22,8 @@ import org.apache.logging.log4j.Logger;
 
 import com.confusedparrotfish.commune.block.ModBlocks;
 import com.confusedparrotfish.commune.item.ModItems;
+import com.confusedparrotfish.commune.lib.effect.EffectRegistry;
+import com.confusedparrotfish.commune.lib.effect.effect;
 import com.confusedparrotfish.commune.tileentity.ModTileEntities;
 import com.confusedparrotfish.commune.tileentity.renderer.mysticauldronrender;
 
@@ -31,6 +33,8 @@ import java.util.stream.Collectors;
 @Mod(Comune.modid)
 public class Comune {
     public static final String modid = "commune";
+
+    public static EffectRegistry effects;
 
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
@@ -49,6 +53,11 @@ public class Comune {
         eventbus.addListener(this::processIMC);
         // Register the doClientStuff method for modloading
         eventbus.addListener(this::doClientStuff);
+
+        effects = new EffectRegistry()
+            .register("id", new effect() {
+                //
+            });
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
